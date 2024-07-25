@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Cyber Case Data</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body style="background-image: url(Images/Futuristic.png); background-repeat: no-repeat; background-attachment: fixed; background-size: cover">
+    <div class="header">
+        <div class="side-nav">
+            <ul>
+                <li>
+                    <div class="logo">
+                        <i class='bx bxl-spring-boot'></i>
+                    </div>
+                    <a href="index.html"><span class="logo_name">SPACELOOK</span></a>
+                </li>
+            </ul>
+            <ul class="nav_list">
+                <li>
+                    <a href="#">
+                        <i class='bx bx-search-alt'></i>
+                        <input type="text" placeholder="Search..." />
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li><ion-icon name="grid"></ion-icon><a href="index.html"><span class="links_name">Dashboard</span></a></li>
+                <li><ion-icon name="earth"></ion-icon><a href="Geolook.html"><span class="links_name">GEO Analysis</span></a></li>
+                <li><ion-icon name="map"></ion-icon><a href="Geosupport.html"><span class="links_name">GEO Cyber Support</span></a></li>
+                <li><ion-icon name="podium"></ion-icon><a href="Fraud.html"><span class="links_name">Cyber Fraud Data</span></a></li>
+                <li><ion-icon name="albums"></ion-icon><a href="Case.html"><span class="links_name">Cyber Case Data</span></a></li>
+                <li><ion-icon name="bug"></ion-icon><a href="Upload.html"><span class="links_name">Data Upload</span></a></li>
+                <li><ion-icon name="download"></ion-icon><a href="Download.html"><span class="links_name">Download</span></a></li>
+                <li><ion-icon name="logo-apple-ar"></ion-icon><a href="About.html"><span class="links_name">About</span></a></li>
+            </ul>
+
+            <div class="user">
+                <img src="Images/Avatar.jpg" class="user-img" />
+                <div>
+                    <h2>Abhay Vishwakarma</h2>
+                </div>
+                <img src="Images/star.png" class="star-img" />
+            </div>
+            <ul>
+                <li><i class='bx bx-log-out' id="log_out"></i><a href="Login.html"><span>Logout</span></a></li>
+            </ul>
+        </div>
+        <div class="sidenav">
+            <a onclick="changeContent('button1')" style="font-size:35px">Cases Data 2019-2020</a>
+            <a onclick="changeContent('button2')" style="font-size:35px">Cases Data 2020-2021</a>
+            <a onclick="changeContent('button3')" style="font-size:35px">Cases Data 2021-2022</a>
+            <a onclick="changeContent('button4')" style="font-size:35px">Cases Data 2022-2023</a>
+        </div>
+        <div class="home_content1">
+            <div class="text" style="margin-top:35px;">Cyber Case Data</div>
+        </div>
+    </div>
+    <div class="box7">
+        <img src="about:blank" id="ncase" alt="Fraud Data" width="490" height="490">
+    </div>
+    <div class="box8">
+        <image src="about:blank" id="graph" alt="Cyber Fraud Cases Plot" width="840" height="490">
+    </div>
+    <div class="box6">
+        <iframe src="about:blank" id="csvFrame" width="1385" height="800" title="Database"></iframe>
+    </div>
+    <script>
+        function changeContent(button) {
+            const iframe = document.getElementById('csvFrame');
+            const img = document.getElementById('ncase');
+            const image = document.getElementById('graph');
+            if (button === 'button1') {
+                image.src = "Images/cyber_cases.png";
+                img.src = "Images/NCase.png";
+                iframe.src = "https://docs.google.com/spreadsheets/d/17FzqObKa2w0JXiv4HuwyMCbEUFz5Lhqi_JSOSbB3cEc/edit?usp=sharing";
+            } else if (button === 'button2') {
+                image.src = "Images/cyber_cases1.png";
+                img.src = "Images/NCase1.png";
+                iframe.src = "https://docs.google.com/spreadsheets/d/1dDjhee7RHmV0xobiltDJ2RyA7LdV-Dc4qmSCY89UCqc/edit?usp=sharing";
+            } else if (button === 'button3') {
+                image.src = "Images/cyber_cases2.png";
+                img.src = "Images/NCase2.png";
+                iframe.src = "https://docs.google.com/spreadsheets/d/1QYdhc88NIMLR1u-ZfbkoiF9RiI50hDNxR9NjPNI_PcE/edit?usp=sharing";
+            } else if (button === 'button4') {
+                image.src = "Images/cyber_cases3.png";
+                img.src = "Images/NCase3.png";
+                iframe.src = "https://docs.google.com/spreadsheets/d/1igHc1Z1XV00Prx9WW4hBLVp1Eh2ndWIlvUtPBfHP26E/edit?usp=sharing";
+            } else {
+                image.src = "data:text/html,<h1>Page Not Found</h1>";
+                img.src = "data:text/html,<h1>Page Not Found</h1>";
+                iframe.src = "data:text/html,<h1>Page Not Found</h1>";
+            }
+        }
+    </script>
+</body>
+</html>
